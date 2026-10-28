@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "name": "Aprender Python",
+    "description": "Fundamentos de Python",
+    "target_completion_date": "2026-11-30",
+    "status": "Completado"
+  },
+  {
+    "id": "2",
+    "name": "Aprender Flask",
+    "description": "Crear APIs REST con Flask",
+    "target_completion_date": "2026-12-31",
+    "status": "En progreso"
+  }
+]
