@@ -1,10 +1,13 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from pathlib import Path
 from datetime import datetime
 import json
 import uuid
 
 app = Flask(__name__)
+CORS(app)
+
 
 DATA_FILE = Path("data/courses.json")
 
@@ -111,22 +114,12 @@ def validate_course_data(data, partial=False):
 
     return None
 
-
-@app.get("/api/health")
-def health_check():
-    return jsonify({
-        "status": "ok",
-        "message": "CodeCraftHub API está funcionando"
-    })
-
-
 @app.get("/api/courses")
 def get_courses():
     courses = read_courses()
     return jsonify(courses), 200
 
-
-@app.get("/api/courses")
+@app.get("/api/courses/<course_id>")
 def get_course(course_id):
     courses = read_courses()
 
@@ -168,8 +161,9 @@ def create_course():
     return jsonify(new_course), 201
 
 
-@app.put("/api/courses")
+@app.put("/api/courses/<course_id>")
 def replace_course(course_id):
+
     data = request.get_json(silent=True)
 
     error = validate_course_data(data)
@@ -199,8 +193,9 @@ def replace_course(course_id):
     }), 404
 
 
-@app.patch("/api/courses")
+@app.patch("/api/courses/<course_id>")
 def update_course(course_id):
+
     data = request.get_json(silent=True)
 
     error = validate_course_data(data, partial=True)
@@ -232,7 +227,7 @@ def update_course(course_id):
     }), 404
 
 
-@app.delete("/api/courses")
+@app.delete("/api/courses/<course_id>")
 def delete_course(course_id):
     courses = read_courses()
 

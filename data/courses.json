@@ -12,5 +12,12 @@
     "description": "Crear APIs REST con Flask",
     "target_completion_date": "2026-12-31",
     "status": "En progreso"
+  },
+  {
+    "id": "22371610-90b6-4607-a568-8abcd7b129e4",
+    "name": "ciberseguridad y php",
+    "description": "Aprenderemos todo lo necesario para poder proteger nuestras webs, y pondremos en practica nuestros conocimientos en un entorno controlado.",
+    "target_completion_date": "2026-12-12",
+    "status": "No iniciado"
   }
 ]
