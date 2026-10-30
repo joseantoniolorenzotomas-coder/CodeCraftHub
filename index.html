@@ -158,8 +158,14 @@
     .btn:active:not(:disabled) { transform: scale(0.98); }
     .btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
-    .btn-primary { background: var(--primary); color: #FFFFFF; }
-    .btn-primary:hover:not(:disabled) { background: var(--primary-hover); }
+    .btn-primary {
+    background: #8B5CF6;
+    color: #FFFFFF;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+    background: var(--primary-hover);
+    }
 
     .btn-ghost {
       background: transparent;
@@ -179,7 +185,7 @@
     .btn-danger:hover:not(:disabled) { background: var(--danger-hover); }
 
     .btn-success {
-        background: var(--success);
+        background: #F59E0B;
         color: #FFFFFF;
     }
 
@@ -668,7 +674,7 @@
           <td class="actions-cell" data-label="">
             <div class="actions">
               <button type="button" class="btn btn-ghost btn-small" data-action="edit" data-id="${escapeHtml(course.id)}">Edit</button>
-              <button type="button" class="btn btn-danger btn-small" data-action="delete" data-id="${escapeHtml(course.id)}">Remove</button>
+              <button type="button" class="btn-danger" onclick="handleDelete('${escapeHtml(course.id)}')">Remove</button>
             </div>
           </td>
         </tr>
