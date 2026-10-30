@@ -9,7 +9,8 @@
       --primary: #8B5CF6;
       --primary-hover: #7C3AED;
       --primary-soft: #EDE9FE;
-      --success: #F59E0B;
+      --success: #16A34A;
+      --success-hover: #15803D;
       --success-soft: #FEF3C7;
       --success-text: #92400E;
       --danger: #EF4444;
@@ -176,6 +177,15 @@
 
     .btn-danger { background: var(--danger); color: #FFFFFF; }
     .btn-danger:hover:not(:disabled) { background: var(--danger-hover); }
+
+    .btn-success {
+        background: var(--success);
+        color: #FFFFFF;
+    }
+
+    .btn-success:hover:not(:disabled) {
+        background: var(--success-hover);
+    }
 
     .btn-small {
       min-height: 32px;
@@ -500,7 +510,7 @@
         </div>
         <div class="form-actions">
           <button id="edit-cancel" type="button" class="btn btn-secondary">Cancel</button>
-          <button id="edit-submit" type="submit" class="btn btn-primary">
+          <button id="edit-submit" type="submit" class="btn btn-success">
             <span class="spinner" hidden></span>
             <span>Save Changes</span>
           </button>
