@@ -489,8 +489,8 @@
           </div>
           <div class="field">
             <label for="edit-date">Target date</label>
-            <input id="edit-date" name="target_date" type="date" />
-            <span class="field-error" data-error-for="target_date"></span>
+            <input id="edit-date" name="target_completion_date" type="date" />
+            <span class="field-error" data-error-for="target_completion_date"></span>
           </div>
           <div class="field field-full">
             <label for="edit-description">Description</label>
@@ -727,10 +727,14 @@
       editingId = course.id;
       clearFieldErrors(editForm);
       setMessage(editMessage, "");
+
       editForm.elements.name.value = course.name ?? "";
       editForm.elements.description.value = course.description ?? "";
-      editForm.elements.target_date.value = course.target_date ?? "";
-      editForm.elements.status.value = STATUSES.includes(course.status) ? course.status : "Not Started";
+      editForm.elements.target_completion_date.value = course.target_completion_date ?? "";
+      editForm.elements.status.value = STATUSES.includes(course.status)
+        ? course.status
+        : "No iniciado";
+
       editModal.hidden = false;
       editForm.elements.name.focus();
     }

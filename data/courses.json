@@ -3,14 +3,14 @@
     "id": "1",
     "name": "Aprender Python",
     "description": "Fundamentos de Python",
-    "target_completion_date": "2026-11-30",
+    "target_completion_date": "2026-05-30",
     "status": "Completado"
   },
   {
     "id": "2",
     "name": "Aprender Flask",
     "description": "Crear APIs REST con Flask",
-    "target_completion_date": "2026-12-31",
+    "target_completion_date": "2026-08-31",
     "status": "En progreso"
   },
   {
@@ -18,6 +18,13 @@
     "name": "ciberseguridad y php",
     "description": "Aprenderemos todo lo necesario para poder proteger nuestras webs, y pondremos en practica nuestros conocimientos en un entorno controlado.",
     "target_completion_date": "2026-12-12",
+    "status": "No iniciado"
+  },
+  {
+    "id": "51d0cc36-93b4-4688-b82e-060b9add181b",
+    "name": "JS moderno",
+    "description": "aprenderemos java script moderno",
+    "target_completion_date": "2027-02-12",
     "status": "No iniciado"
   }
 ]
